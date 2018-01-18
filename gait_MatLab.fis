@@ -1,0 +1,54 @@
+[System]
+Name='gait_MatLab'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='hip'
+Range=[-30 30]
+NumMFs=3
+MF1='extension':'trimf',[-30 -30 0]
+MF2='low_flexion':'trimf',[0 15 15]
+MF3='hig_flexion':'trimf',[15 30 30]
+
+[Input2]
+Name='knee'
+Range=[0 70]
+NumMFs=3
+MF1='low':'trimf',[0 0 20]
+MF2='medium':'trimf',[20 20 40]
+MF3='mf3':'trimf',[40 40 70]
+
+[Input3]
+Name='time'
+Range=[0 100]
+NumMFs=3
+MF1='low':'trimf',[0 0 25]
+MF2='medium':'trimf',[25 25 75]
+MF3='high':'trimf',[75 75 100]
+
+[Input4]
+Name='stage'
+Range=[0 100]
+NumMFs=3
+MF1='SLR':'trimf',[0 0 10]
+MF2='SMS':'trimf',[10 10 40]
+MF3='SSS':'trimf',[40 40 100]
+
+[Output1]
+Name='phase'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.4 0 0.4]
+MF2='mf2':'trimf',[0.1 0.5 0.9]
+MF3='mf3':'trimf',[0.6 1 1.4]
+
+[Rules]
