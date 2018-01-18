@@ -13,35 +13,35 @@ DefuzzMethod='centroid'
 
 [Input1]
 Name='hip'
-Range=[-30 30]
+Range=[0 1]
 NumMFs=3
-MF1='extension':'trimf',[-30 -30 0]
-MF2='low_flexion':'trimf',[0 0 15]
-MF3='hig_flexion':'trimf',[15 15 30]
+MF1='extension':'gaussmf',[0.193372243239245 0.0493]
+MF2='low_flexion':'gaussmf',[0.0955 0.498388489208633]
+MF3='hig_flexion':'gaussmf',[0.22233900481209 0.992]
 
 [Input2]
 Name='knee'
-Range=[0 70]
+Range=[0 1]
 NumMFs=3
-MF1='low':'trimf',[0 0 20]
-MF2='medium':'trimf',[20 20 40]
-MF3='mf3':'trimf',[40 40 70]
+MF1='low':'gaussmf',[0.172179933090571 0.0143]
+MF2='medium':'gaussmf',[0.179233377518814 0.5]
+MF3='high':'gaussmf',[0.174141520202939 1]
 
 [Input3]
 Name='time'
-Range=[0 100]
+Range=[0 1]
 NumMFs=3
-MF1='low':'trimf',[0 0 25]
-MF2='medium':'trimf',[25 25 75]
-MF3='high':'trimf',[75 75 100]
+MF1='low':'gaussmf',[0.2857 0.0125]
+MF2='medium':'gaussmf',[0.2 0.5]
+MF3='high':'gaussmf',[0.2 1]
 
 [Input4]
 Name='stage'
-Range=[0 100]
+Range=[0 1]
 NumMFs=3
-MF1='SLR':'trimf',[0 0 10]
-MF2='SMS':'trimf',[10 10 40]
-MF3='SSS':'trimf',[40 40 100]
+MF1='SLR':'zmf',[0.0803 0.0828]
+MF2='SMS':'gaussmf',[0.0531589903777392 0.2]
+MF3='SSS':'trimf',[0.365707434052758 0.717]
 
 [Output1]
 Name='phase'
