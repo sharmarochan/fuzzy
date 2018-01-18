@@ -16,8 +16,8 @@ Name='hip'
 Range=[-30 30]
 NumMFs=3
 MF1='extension':'trimf',[-30 -30 0]
-MF2='low_flexion':'trimf',[0 15 15]
-MF3='hig_flexion':'trimf',[15 30 30]
+MF2='low_flexion':'trimf',[0 0 15]
+MF3='hig_flexion':'trimf',[15 15 30]
 
 [Input2]
 Name='knee'
@@ -46,9 +46,13 @@ MF3='SSS':'trimf',[40 40 100]
 [Output1]
 Name='phase'
 Range=[0 1]
-NumMFs=3
-MF1='mf1':'trimf',[-0.4 0 0.4]
-MF2='mf2':'trimf',[0.1 0.5 0.9]
-MF3='mf3':'trimf',[0.6 1 1.4]
+NumMFs=7
+MF1='P-LR':'trimf',[0 0.1 0.2]
+MF2='P-MSS':'trimf',[0.1 0.2 0.3]
+MF3='P-TSS':'trimf',[0.2 0.3 0.4]
+MF4='P-PSW':'trimf',[0.3 0.4 0.5]
+MF5='P-IS':'trimf',[0.4 0.5 0.6]
+MF6='PMSW':'trimf',[0.5 0.6 0.7]
+MF7='PTSW':'trimf',[0.6 0.7 0.8]
 
 [Rules]

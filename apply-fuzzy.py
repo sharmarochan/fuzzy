@@ -83,28 +83,28 @@ phase = ctrl.Consequent(np.arange(0, 100, 1), 'phase')
 
 hip['extension'] = fuzz.trimf(hip.universe, [-30, -30, 0])
 hip['low'] = fuzz.trimf(hip.universe, [0, 0, 15])
-hip['high'] = fuzz.trimf(hip.universe, [0, 15, 30])
+hip['high'] = fuzz.trimf(hip.universe, [15, 15, 30])
 
 knee['low'] = fuzz.trimf(knee.universe, [0, 0, 20])
-knee['medium'] = fuzz.trimf(knee.universe, [0, 20, 40])
-knee['high'] = fuzz.trimf(knee.universe, [20, 40, 70])
+knee['medium'] = fuzz.trimf(knee.universe, [20, 20, 40])
+knee['high'] = fuzz.trimf(knee.universe, [40, 40, 70])
 
 time['low'] = fuzz.trimf(time.universe, [0, 0, 25])
-time['medium'] = fuzz.trimf(time.universe, [0, 25, 75])
-time['high'] = fuzz.trimf(time.universe, [25, 75, 100])
+time['medium'] = fuzz.trimf(time.universe, [25, 25, 75])
+time['high'] = fuzz.trimf(time.universe, [75, 75, 100])
 
 
 stage['SLR'] = fuzz.trimf(stage.universe, [0, 0, 10])
-stage['SMS'] = fuzz.trimf(stage.universe, [0, 10, 40])
-stage['SSS'] = fuzz.trimf(stage.universe, [10, 40, 100])
+stage['SMS'] = fuzz.trimf(stage.universe, [10, 10, 40])
+stage['SSS'] = fuzz.trimf(stage.universe, [40, 40, 100])
 
-phase['Loading_response'] = fuzz.trimf(phase.universe, [0, 0, 10])
-phase['Mid_stance'] = fuzz.trimf(phase.universe, [0, 10, 30])
-phase['Terminal_stance'] = fuzz.trimf(phase.universe, [10, 30, 50])
-phase['Preswing'] = fuzz.trimf(phase.universe, [30, 50, 60])
-phase['Initial_swing'] = fuzz.trimf(phase.universe, [50, 60, 73])
-phase['Mid_swing'] = fuzz.trimf(phase.universe, [60, 73, 87])
-phase['Terminal_swing'] = fuzz.trimf(phase.universe, [73, 87, 100])
+phase['P-LR'] = fuzz.trimf(phase.universe, [0, 10, 20])
+phase['P-MSS'] = fuzz.trimf(phase.universe, [10, 20, 30])
+phase['P-TSS'] = fuzz.trimf(phase.universe, [20, 30, 40])
+phase['P-PSW'] = fuzz.trimf(phase.universe, [30, 40, 50])
+phase['P-IS'] = fuzz.trimf(phase.universe, [40, 50, 60])
+phase['PMSW'] = fuzz.trimf(phase.universe, [50, 60, 70])
+phase['PTSW'] = fuzz.trimf(phase.universe, [60, 70, 80])
 
 
 hip.view()
