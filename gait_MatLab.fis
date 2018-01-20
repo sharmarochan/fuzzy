@@ -4,7 +4,7 @@ Type='mamdani'
 Version=2.0
 NumInputs=4
 NumOutputs=1
-NumRules=0
+NumRules=8
 AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
@@ -15,8 +15,8 @@ DefuzzMethod='centroid'
 Name='hip'
 Range=[0 1]
 NumMFs=3
-MF1='extension':'gaussmf',[0.193372243239245 0.0493]
-MF2='low_flexion':'gaussmf',[0.0955 0.498388489208633]
+MF1='extension':'gaussmf',[0.19 0.0493]
+MF2='low_flexion':'gaussmf',[0.2 0.4984]
 MF3='hig_flexion':'gaussmf',[0.22233900481209 0.992]
 
 [Input2]
@@ -56,3 +56,11 @@ MF6='PMSW':'trimf',[0.5 0.6 0.7]
 MF7='PTSW':'trimf',[0.6 0.7 0.8]
 
 [Rules]
+3 1 1 1, 1 (1) : 1
+-3 1 1 2, 2 (1) : 1
+2 1 1 2, 2 (1) : 1
+1 2 2 0, 3 (1) : 1
+1 -1 2 3, 4 (1) : 1
+2 -1 2 3, 5 (1) : 1
+3 -3 3 3, 6 (1) : 1
+3 -1 3 3, 7 (1) : 1
